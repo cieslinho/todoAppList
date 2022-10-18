@@ -14,15 +14,36 @@
 </head>
 
 <body>
-
-
-
-
-
-
-
-
-
+    <div class="container">
+        <div class="wrapper">
+            <div class="top-panel">
+                <h1>todoList<span>App</span>v2</h1>
+                <div class="create-section">
+                    <input type="text" id="create-todo" class="create-todo" placeholder="Wpisz treść zadania...">
+                    <label for="create-todo"></label>
+                    <button class="add-todo">add</button>
+                </div>
+            </div>
+            <div class="bottom-panel">
+                <h3>lista zadań:</h3>
+                <p class="error-text">Brak zadań na liście</p>
+                <ul class="todo-list">
+                </ul>
+            </div>
+        </div>
+        <div class="popup">
+            <h3>edytuj zadanie:</h3>
+            <p class="error-info"></p>
+            <div class="edit-panel">
+                <input type="text" id="todo-edit">
+                <label for="todo-edit"></label>
+                <div class="buttons">
+                    <button class="apply">zatwierdź</button>
+                    <button class="cancel">anuluj</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 

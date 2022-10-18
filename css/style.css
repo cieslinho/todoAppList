@@ -15,5 +15,307 @@ html {
 body {
   font-size: 1.6rem;
   font-family: 'Roboto', sans-serif;
+  background-color: #333;
+}
+
+.container {
+  padding: 0 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.wrapper {
+  margin-bottom: 50px;
+  max-width: 900px;
+  width: 100%;
+  border-radius: 8px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0ba360), to(#3cba92));
+  background-image: linear-gradient(to bottom, #0ba360 0%, #3cba92 100%);
+  color: #fff;
+  overflow: hidden;
+  -webkit-box-shadow: 5px 5px 10px black;
+          box-shadow: 5px 5px 10px black;
+}
+
+.wrapper .top-panel {
+  padding: 2em 1em 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .top-panel h1 {
+  text-align: center;
+  text-shadow: 0 0 10px black;
+}
+
+.wrapper .top-panel h1 span {
+  font-weight: 100;
+}
+
+.wrapper .top-panel .create-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1em 2em;
+}
+
+.wrapper .top-panel .create-section input::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+.wrapper .top-panel .create-section input:-ms-input-placeholder {
+  font-style: italic;
+}
+
+.wrapper .top-panel .create-section input::-ms-input-placeholder {
+  font-style: italic;
+}
+
+.wrapper .top-panel .create-section input::placeholder {
+  font-style: italic;
+}
+
+.wrapper .top-panel .create-section input,
+.wrapper .top-panel .create-section button {
+  padding: 1em;
+  width: 80%;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper .top-panel .create-section button {
+  margin-left: 1em;
+  width: 20%;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #fff;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.wrapper .top-panel .create-section button:hover {
+  background-color: #d8d8d8;
+}
+
+.wrapper .top-panel .create-section button:focus {
+  outline: none;
+}
+
+.wrapper .top-panel .create-section .create-todo {
+  border: 1px solid transparent;
+  -webkit-transition: border 0.3s, background-color 0.3s;
+  transition: border 0.3s, background-color 0.3s;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper .top-panel .create-section .create-todo:focus {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: rgba(199, 247, 192, 0.95);
+  outline: none;
+}
+
+.wrapper .bottom-panel {
+  background-color: #fff;
+  padding: 1em 2em;
+}
+
+.wrapper .bottom-panel h3 {
+  margin-bottom: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.3rem;
+  color: #000;
+}
+
+.wrapper .bottom-panel .error-text {
+  margin-bottom: 1.5em;
+  text-align: center;
+  color: #000;
+}
+
+.wrapper .bottom-panel .todo-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper .bottom-panel .todo-list li {
+  padding: 0.6em 1.5em;
+  margin-bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(128, 128, 128, 0.15);
+  border-radius: 8px;
+  list-style: none;
+  color: #333;
+}
+
+.wrapper .bottom-panel .todo-list li .buttons .complete {
+  color: #0ba360;
+}
+
+.wrapper .bottom-panel .todo-list li .buttons .edit {
+  color: #5b7de4;
+  font-weight: bold;
+}
+
+.wrapper .bottom-panel .todo-list li .buttons .delete {
+  color: tomato;
+}
+
+.wrapper .bottom-panel .todo-list li .buttons .completedBtn {
+  color: #000;
+}
+
+.wrapper .bottom-panel .todo-list li button {
+  padding: 0.7em;
+  border: none;
+  font-size: 1.4rem;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.wrapper .bottom-panel .todo-list li button:nth-child(2) {
+  margin: 0 0.5em;
+}
+
+.wrapper .bottom-panel .todo-list li button:hover {
+  background-color: rgba(128, 128, 128, 0.15);
+}
+
+.wrapper .bottom-panel .todo-list li button:focus {
+  outline: none;
+}
+
+.completed {
+  font-size: 1.2rem;
+  font-style: italic;
+  text-decoration: line-through;
+  color: #000;
+}
+
+.popup {
+  display: none;
+  padding: 1em 2em;
+  max-width: 550px;
+  width: 100%;
+  border-radius: 8px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#323232), color-stop(40%, #3f3f3f), color-stop(150%, #1c1c1c)), -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.4)), color-stop(200%, rgba(0, 0, 0, 0.25)));
+  background: linear-gradient(to bottom, #323232 0%, #3f3f3f 40%, #1c1c1c 150%), linear-gradient(to top, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.25) 200%);
+  background-blend-mode: multiply;
+  -webkit-box-shadow: 5px 5px 10px black;
+          box-shadow: 5px 5px 10px black;
+}
+
+.popup h3 {
+  margin-bottom: 0.8em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+
+.popup .error-info {
+  text-align: center;
+  color: #fff;
+}
+
+.popup .edit-panel {
+  padding: 1em;
+}
+
+.popup .edit-panel input {
+  margin-bottom: 0.5em;
+  padding: 0.5em 1em;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  -webkit-transition: border 0.3s, background-color 0.3s;
+  transition: border 0.3s, background-color 0.3s;
+  font-family: 'Roboto', sans-serif;
+}
+
+.popup .edit-panel input:focus {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: rgba(207, 207, 207, 0.95);
+  outline: none;
+}
+
+.popup .edit-panel .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.5em 2em;
+}
+
+.popup .edit-panel .buttons button {
+  padding: 0.5em 1.4em;
+  margin: 0 0.8em;
+  border: none;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  background-color: #fff;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.popup .edit-panel .buttons button:hover {
+  background-color: #d8d8d8;
+}
+
+.popup .edit-panel .buttons button:focus {
+  outline: none;
 }
 /*# sourceMappingURL=style.css.map */
